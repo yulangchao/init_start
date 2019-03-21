@@ -1,0 +1,1537 @@
+---------------------------------------------------------------
+[ 2019-03-21T07:24:38+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001934s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin` [ RunTime:0.002893s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_admin` WHERE  `username` = 'yulangchao' LIMIT 1 [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.001911s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('Login' , '{\"__token__\":\"60abca952d965a187c203f1536a09deb\",\"username\":\"yulangchao\",\"captcha\":\"5szv\",\"keeplogin\":\"1\"}' , '/index.php/admin/index/login' , 0 , 'Unknown' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124278) [ RunTime:0.001209s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:41+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011161s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.002120s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"__token__\":\"b57851f1e2c41eb514dbe610c8242dab\",\"username\":\"richardyych\",\"captcha\":\"5szv\",\"keeplogin\":\"1\"}' , '/index.php/admin/index/login' , 0 , 'Unknown' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124281) [ RunTime:0.001634s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:46+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010447s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin` [ RunTime:0.001601s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_admin` WHERE  `username` = 'richardyych' LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] UPDATE `vw_admin`  SET `logintime`=1553124286,`token`='bbe014eb-9bc3-4665-8d3e-d589db696c37',`updatetime`=1553124286  WHERE  `id` = 1 [ RunTime:0.001800s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.002428s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('Login' , '{\"__token__\":\"79a3862fbee88ec6dba582da89d27694\",\"username\":\"richardyych\",\"captcha\":\"k23c\",\"keeplogin\":\"1\"}' , '/index.php/admin/index/login' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124286) [ RunTime:0.001626s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:46+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011086s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001555s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001659s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001619s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000750s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:47+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001360s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001517s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001989s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vw_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000472s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:53+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/dashboard?ref=addtabs&lang=zh-cn
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001897s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.002104s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001934s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000480s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:53+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001640s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.002077s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001617s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001912s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000617s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:53+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001978s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.002518s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.002516s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vw_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000375s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:24:54+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/dashboard?lang=zh-cn&addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001914s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.002390s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.002600s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vw_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000425s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:25:37+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/category?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002577s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.002553s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002187s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.002607s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_category` [ RunTime:0.002451s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vw_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.000721s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:25:38+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/category/index?sort=weigh&order=desc&_=1553124337978
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011671s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001537s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001327s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_category` [ RunTime:0.001918s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000455s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:25:40+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/category/index?sort=weigh&order=desc&_=1553124337979
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002117s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.003167s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002027s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.002502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000712s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_category` [ RunTime:0.002447s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000454s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:19+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001866s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.002504s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002037s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.002741s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vw_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.000532s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:26+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001966s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001714s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.002032s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000609s ]
+[ sql ] [ SQL ] INSERT INTO `vw_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command' , '在线命令管理' , 'fa fa-terminal' , 1 , 0 , 'normal' , 1553124446 , 1553124446) [ RunTime:0.001766s ]
+[ sql ] [ SQL ] INSERT INTO `vw_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/index' , '查看' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1553124446 , 1553124446) [ RunTime:0.001249s ]
+[ sql ] [ SQL ] INSERT INTO `vw_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/add' , '添加' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1553124446 , 1553124446) [ RunTime:0.000969s ]
+[ sql ] [ SQL ] INSERT INTO `vw_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/detail' , '详情' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1553124446 , 1553124446) [ RunTime:0.000864s ]
+[ sql ] [ SQL ] INSERT INTO `vw_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/execute' , '运行' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1553124446 , 1553124446) [ RunTime:0.000956s ]
+[ sql ] [ SQL ] INSERT INTO `vw_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/del' , '删除' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1553124446 , 1553124446) [ RunTime:0.000956s ]
+[ sql ] [ SQL ] INSERT INTO `vw_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('command/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 85 , 'normal' , 1553124446 , 1553124446) [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.001630s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"command\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.5\",\"faversion\":\"1.0.0.20190111_beta\"}' , '/index.php/admin/addon/install' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124446) [ RunTime:0.001281s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:26+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001627s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001980s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001855s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000727s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.001670s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124446) [ RunTime:0.001100s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:28+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/command?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002056s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001094s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `vw_auth_rule` WHERE  `name` = 'command' LIMIT 1 [ RunTime:0.000576s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:28+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1553124448534
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001462s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001555s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001677s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_command` [ RunTime:0.002339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_command` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_command` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000260s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:30+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/command/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001824s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.002245s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.001682s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW TABLES [ RunTime:0.001048s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:30+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/command/get_field_list
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011487s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'vanwan_ca' AND table_name = 'vw_admin' ORDER BY ORDINAL_POSITION [ RunTime:0.001739s ]
+[ sql ] [ SQL ] 'vw_admin'vanwan_ca'HOW COLUMNS FROM `vw_admin_log` [ RunTime:0.000914s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"table\":\"vw_admin\"}' , '/index.php/admin/command/get_field_list' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124450) [ RunTime:0.001359s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:35+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/command/command/action/execute
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002265s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000748s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_command` [ RunTime:0.002303s ]
+[ sql ] [ SQL ] INSERT INTO `vw_command` (`type` , `params` , `command` , `executetime` , `createtime` , `updatetime`) VALUES ('api' , '[\"--force=1\"]' , 'php think api --force=1' , 1553124455 , 1553124455 , 1553124455) [ RunTime:0.001448s ]
+[ sql ] [ SQL ] UPDATE `vw_command`  SET `status`='successed',`content`='Build Successed!',`updatetime`=1553124455  WHERE  `id` = 1 [ RunTime:0.001559s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.002932s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"commandtype\":\"api\",\"force\":\"1\",\"url\":\"\",\"output\":\"\",\"template\":\"\",\"title\":\"\",\"author\":\"\",\"language\":\"\",\"action\":\"execute\"}' , '/index.php/admin/command/command/action/execute' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124455) [ RunTime:0.001260s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:35+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1553124448535
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001564s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001103s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_command` [ RunTime:0.001726s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_command` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_command` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000407s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:36+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001686s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.001696s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553124456) [ RunTime:0.001429s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:27:37+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1553124448536
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002320s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.000954s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_command` [ RunTime:0.001800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_command` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_command` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000241s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:28:08+08:00 ] 127.0.0.1 GET vanwan.ca/api/ems/send?email=richardyych%40gmail.com&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001751s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_ems` [ RunTime:0.002480s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_ems` WHERE  `email` = 'richardyych@gmail.com'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001934s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `email` = 'richardyych@gmail.com' LIMIT 1 [ RunTime:0.000570s ]
+[ sql ] [ SQL ] INSERT INTO `vw_ems` (`event` , `email` , `code` , `ip` , `createtime`) VALUES ('register' , 'richardyych@gmail.com' , '2495' , '127.0.0.1' , 1553124486) [ RunTime:0.001401s ]
+[ sql ] [ SQL ] DELETE FROM `vw_ems`    WHERE  `id` = 1 [ RunTime:0.001977s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:28:16+08:00 ] 127.0.0.1 GET vanwan.ca/api/ems/send?email=richardyych%40gmail.com&event=abc
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011966s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_ems` [ RunTime:0.001866s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_ems` WHERE  `email` = 'richardyych@gmail.com'  AND `event` = 'abc' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001753s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `email` = 'richardyych@gmail.com' LIMIT 1 [ RunTime:0.000496s ]
+[ sql ] [ SQL ] INSERT INTO `vw_ems` (`event` , `email` , `code` , `ip` , `createtime`) VALUES ('abc' , 'richardyych@gmail.com' , '6780' , '127.0.0.1' , 1553124495) [ RunTime:0.001507s ]
+[ sql ] [ SQL ] DELETE FROM `vw_ems`    WHERE  `id` = 2 [ RunTime:0.001277s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:29:16+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002267s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002628s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553120956 LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.002009s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000673s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '7303' , '127.0.0.1' , 1553124556) [ RunTime:0.001230s ]
+[ sql ] [ SQL ] DELETE FROM `vw_sms`    WHERE  `id` = 1 [ RunTime:0.000987s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:34:44+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/addon/downloaded?callback=jQuery22406633441007767216_1553124439634&sort=id&order=desc&filter=%7B%22type%22%3A%22local%22%2C%22category_id%22%3A%2218%22%2C%22faversion%22%3A%221.0.0.20190111_beta%22%7D&op=%7B%22type%22%3A%22%3D%22%2C%22category_id%22%3A%22%3D%22%2C%22faversion%22%3A%22%3D%22%7D&_=1553124439640
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011178s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.000929s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000491s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:39:52+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001736s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.001914s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"smsbao\",\"force\":\"0\",\"uid\":\"0\",\"token\":\"\",\"version\":\"1.0.0\",\"faversion\":\"1.0.0.20190111_beta\"}' , '/index.php/admin/addon/install' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553125192) [ RunTime:0.001705s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:39:52+08:00 ] 127.0.0.1 POST vanwan.ca/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010481s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.001162s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_admin_log` [ RunTime:0.001809s ]
+[ sql ] [ SQL ] INSERT INTO `vw_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'richardyych' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36' , '127.0.0.1' , 1553125192) [ RunTime:0.001073s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:40:09+08:00 ] 127.0.0.1 GET vanwan.ca/index.php/admin/addon/config?name=smsbao&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001571s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_group_access` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `vw_auth_group_access` `aga` LEFT JOIN `vw_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_auth_rule` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `vw_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000496s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:41:33+08:00 ] 127.0.0.1 GET vanwan.ca/api/ems/send?email=richardyych%40gmail.com&event=abc
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001701s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_ems` [ RunTime:0.001886s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_ems` WHERE  `email` = 'richardyych@gmail.com'  AND `event` = 'abc' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001764s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `email` = 'richardyych@gmail.com' LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] INSERT INTO `vw_ems` (`event` , `email` , `code` , `ip` , `createtime`) VALUES ('abc' , 'richardyych@gmail.com' , '5818' , '127.0.0.1' , 1553125291) [ RunTime:0.001250s ]
+[ sql ] [ SQL ] DELETE FROM `vw_ems`    WHERE  `id` = 3 [ RunTime:0.001659s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:41:34+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001479s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001448s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553121693 LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '9889' , '127.0.0.1' , 1553125293) [ RunTime:0.001531s ]
+[ sql ] [ SQL ] DELETE FROM `vw_sms`    WHERE  `id` = 2 [ RunTime:0.001720s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:41:36+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011477s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001615s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553121695 LIMIT 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001459s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '9660' , '127.0.0.1' , 1553125295) [ RunTime:0.001203s ]
+[ sql ] [ SQL ] DELETE FROM `vw_sms`    WHERE  `id` = 3 [ RunTime:0.001426s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:41:52+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001472s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001815s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553121711 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001702s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '1307' , '127.0.0.1' , 1553125311) [ RunTime:0.001260s ]
+[ sql ] [ SQL ] DELETE FROM `vw_sms`    WHERE  `id` = 4 [ RunTime:0.001568s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:42:39+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001836s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002038s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553121759 LIMIT 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001778s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '2907' , '127.0.0.1' , 1553125359) [ RunTime:0.001594s ]
+[ sql ] [ SQL ] DELETE FROM `vw_sms`    WHERE  `id` = 5 [ RunTime:0.001500s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:47:12+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012344s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001812s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122032 LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001563s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '6235' , '127.0.0.1' , 1553125632) [ RunTime:0.001866s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:47:13+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012033s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001457s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:47:15+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001502s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001554s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000361s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:47:18+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010887s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001799s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122038 LIMIT 1 [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001993s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195216' LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195216' , '8506' , '127.0.0.1' , 1553125638) [ RunTime:0.001274s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:47:31+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006250s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001826s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000561s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:47:36+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195218&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010374s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001804s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195218'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122056 LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000712s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195218' LIMIT 1 [ RunTime:0.000576s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195218' , '1446' , '127.0.0.1' , 1553125656) [ RunTime:0.001375s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:52:50+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001907s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122370 LIMIT 1 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000880s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '5712' , '127.0.0.1' , 1553125970) [ RunTime:0.001416s ]
+[ error ] [64]main(): Failed opening required 'C:\workplace\vanwan\addons\smsbao/vendor/autoload.php' (include_path='.;C:\php\pear')
+---------------------------------------------------------------
+[ 2019-03-21T07:53:06+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010514s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001030s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000564s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:53:23+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003941s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001850s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000690s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122403 LIMIT 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001700s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '9105' , '127.0.0.1' , 1553126003) [ RunTime:0.001214s ]
+[ error ] [64]main(): Failed opening required 'C:\workplace\vanwan\addons\smsbao/vendor/autoload.php' (include_path='.;C:\php\pear')
+---------------------------------------------------------------
+[ 2019-03-21T07:54:44+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001729s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002103s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122484 LIMIT 1 [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.002816s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '9519' , '127.0.0.1' , 1553126084) [ RunTime:0.001344s ]
+[ error ] [0]致命错误: Class 'addons\smsbao\Client' not found
+---------------------------------------------------------------
+[ 2019-03-21T07:54:50+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009926s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001854s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000615s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:54:51+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011449s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000991s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000328s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:55:04+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011673s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001422s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122504 LIMIT 1 [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195216' LIMIT 1 [ RunTime:0.000622s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195216' , '9409' , '127.0.0.1' , 1553126104) [ RunTime:0.001377s ]
+[ error ] [64]main(): Failed opening required 'C:\workplace\vanwan\addons\smsbao/vendor/autoload.php' (include_path='.;C:\php\pear')
+---------------------------------------------------------------
+[ 2019-03-21T07:55:41+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010492s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000943s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:55:45+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195217&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001491s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195217'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122544 LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195217' LIMIT 1 [ RunTime:0.000662s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195217' , '6827' , '127.0.0.1' , 1553126144) [ RunTime:0.001065s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T07:56:59+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195218&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001803s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000983s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195218'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122619 LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195218' LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195218' , '4411' , '127.0.0.1' , 1553126219) [ RunTime:0.001583s ]
+[ error ] [64]main(): Failed opening required 'C:\workplace\vanwan\addons\smsbao/vendor/Twilio/autoload.php' (include_path='.;C:\php\pear')
+---------------------------------------------------------------
+[ 2019-03-21T07:57:01+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195219&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001707s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195219'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122621 LIMIT 1 [ RunTime:0.000600s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:12+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195219&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004984s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195219'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122632 LIMIT 1 [ RunTime:0.000431s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:13+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195219&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001657s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195219'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122633 LIMIT 1 [ RunTime:0.000439s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:16+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195210&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010640s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195210'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122636 LIMIT 1 [ RunTime:0.000390s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:17+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195210&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010986s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001210s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195210'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122637 LIMIT 1 [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:22+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195212&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011815s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001364s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195212'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122642 LIMIT 1 [ RunTime:0.000528s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:40+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195212&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001527s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000890s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195212'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122660 LIMIT 1 [ RunTime:0.000452s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:42+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011547s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122662 LIMIT 1 [ RunTime:0.000492s ]
+---------------------------------------------------------------
+[ 2019-03-21T07:57:53+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004897s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001460s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122672 LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195211' LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195211' , '2999' , '127.0.0.1' , 1553126272) [ RunTime:0.001634s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T07:59:49+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010611s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001845s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553122788 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000695s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195211' LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195211' , '1155' , '127.0.0.1' , 1553126388) [ RunTime:0.001135s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:08:51+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001997s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002287s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553137730 LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001006s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195211' LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195211' , '3967' , '127.0.0.1' , 1553141330) [ RunTime:0.000966s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:08:53+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011473s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001328s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000334s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:09:43+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002350s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001838s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553137783 LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001918s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195211' LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195211' , '8858' , '127.0.0.1' , 1553141383) [ RunTime:0.001455s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:10:06+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195217&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001859s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001906s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195217'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553137806 LIMIT 1 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.002688s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195217' LIMIT 1 [ RunTime:0.000505s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195217' , '2080' , '127.0.0.1' , 1553141406) [ RunTime:0.003695s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:10:26+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195219&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009169s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001397s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195219'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553137826 LIMIT 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195219' LIMIT 1 [ RunTime:0.000681s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195219' , '7643' , '127.0.0.1' , 1553141426) [ RunTime:0.003723s ]
+[ error ] [0]语法解析错误: syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+---------------------------------------------------------------
+[ 2019-03-21T12:11:48+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195219&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007276s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001541s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195219'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553137907 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195219' LIMIT 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195219' , '1375' , '127.0.0.1' , 1553141507) [ RunTime:0.003625s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:12:19+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001730s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001779s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553137938 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000834s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '2280' , '127.0.0.1' , 1553141538) [ RunTime:0.003575s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:12:35+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001391s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001390s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553137954 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001299s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000699s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '2666' , '127.0.0.1' , 1553141554) [ RunTime:0.003990s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:14:50+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001768s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001787s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138090 LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '7390' , '127.0.0.1' , 1553141690) [ RunTime:0.003368s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:14:52+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001462s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001506s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000451s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:14:53+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017715s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001911s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000437s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:14:58+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195225&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011309s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001584s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195225'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138098 LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195225' LIMIT 1 [ RunTime:0.000496s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195225' , '9797' , '127.0.0.1' , 1553141698) [ RunTime:0.004040s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:15:12+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195225&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014866s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001575s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195225'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000439s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:15:15+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195222&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002017s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002005s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195222'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138115 LIMIT 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195222' LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195222' , '2925' , '127.0.0.1' , 1553141715) [ RunTime:0.003755s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:15:34+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195221&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011401s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001690s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195221'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138134 LIMIT 1 [ RunTime:0.000720s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195221' LIMIT 1 [ RunTime:0.000535s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195221' , '1746' , '127.0.0.1' , 1553141734) [ RunTime:0.004282s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:16:06+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195226&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011053s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001530s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195226'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138166 LIMIT 1 [ RunTime:0.000294s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:16:10+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195228&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001760s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002245s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195228'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138170 LIMIT 1 [ RunTime:0.000497s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:16:13+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195229&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010559s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001537s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195229'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138173 LIMIT 1 [ RunTime:0.000402s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:16:20+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195229&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001609s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001528s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195229'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138180 LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195229' LIMIT 1 [ RunTime:0.000696s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195229' , '6460' , '127.0.0.1' , 1553141780) [ RunTime:0.001404s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:16:44+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195222&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012813s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001547s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195222'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138204 LIMIT 1 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195222' LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195222' , '3548' , '127.0.0.1' , 1553141804) [ RunTime:0.004014s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:17:22+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195221&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011820s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001573s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195221'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138242 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001456s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195221' LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195221' , '1707' , '127.0.0.1' , 1553141842) [ RunTime:0.003465s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:17:31+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195223&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010738s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001681s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195223'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138250 LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195223' LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195223' , '2355' , '127.0.0.1' , 1553141850) [ RunTime:0.003670s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:18:35+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001642s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001632s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138315 LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '3113' , '127.0.0.1' , 1553141915) [ RunTime:0.003544s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:18:38+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018271s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002700s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000533s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:19:05+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016348s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001900s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138345 LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '5568' , '127.0.0.1' , 1553141945) [ RunTime:0.003852s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:21:10+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007123s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002098s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138469 LIMIT 1 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000702s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '2625' , '127.0.0.1' , 1553142069) [ RunTime:0.003408s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:21:12+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011048s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002049s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000560s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:21:14+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009123s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001808s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138474 LIMIT 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195216' LIMIT 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195216' , '7882' , '127.0.0.1' , 1553142074) [ RunTime:0.000899s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:21:51+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002218s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002499s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000594s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:21:52+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010814s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001506s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000381s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:21:53+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013221s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001863s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000401s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:21:53+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195216&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008843s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001878s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195216'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000387s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:21:56+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012795s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001508s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138515 LIMIT 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000822s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195211' LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195211' , '1143' , '127.0.0.1' , 1553142115) [ RunTime:0.003948s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate
+---------------------------------------------------------------
+[ 2019-03-21T12:22:21+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195211&event=
+[运行时间：0.038132s] [吞吐率：26.22req/s] [内存消耗：2,579.59kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002268s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195211',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002349s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001307s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001699s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195211'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000647s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:22:26+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195217&event=
+[运行时间：0.240321s] [吞吐率：4.16req/s] [内存消耗：3,088.36kb] [文件加载：92]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001889s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195217',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001306s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010938s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002756s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195217'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138546 LIMIT 1 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195217' LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195217' , '5360' , '127.0.0.1' , 1553142146) [ RunTime:0.003679s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Http\CurlClient.php:41]
+---------------------------------------------------------------
+[ 2019-03-21T12:23:16+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195222&event=
+[运行时间：0.056512s] [吞吐率：17.70req/s] [内存消耗：2,580.68kb] [文件加载：70]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002820s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195222',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001744s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009576s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001809s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195222'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138596 LIMIT 1 [ RunTime:0.000429s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:23:25+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195222&event=
+[运行时间：0.507138s] [吞吐率：1.97req/s] [内存消耗：3,088.48kb] [文件加载：92]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002208s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195222',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001482s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012051s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001462s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195222'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138605 LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195222' LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195222' , '2511' , '127.0.0.1' , 1553142205) [ RunTime:0.001032s ]
+[ error ] [0]SSL certificate problem: unable to get local issuer certificate[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Http\CurlClient.php:41]
+---------------------------------------------------------------
+[ 2019-03-21T12:26:18+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195222&event=
+[运行时间：1.471163s] [吞吐率：0.68req/s] [内存消耗：3,094.73kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000101s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002823s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195222',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002748s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002231s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002021s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195222'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138776 LIMIT 1 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195222' LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195222' , '6524' , '127.0.0.1' , 1553142376) [ RunTime:0.003715s ]
+[ error ] [21606][HTTP 400] Unable to create record: The From phone number +15017250604 is not a valid, SMS-capable inbound phone number or short code for your account.[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Version.php:85]
+---------------------------------------------------------------
+[ 2019-03-21T12:27:34+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195222&event=
+[运行时间：0.495100s] [吞吐率：2.02req/s] [内存消耗：3,094.73kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003660s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195222',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001431s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001337s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002034s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195222'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138853 LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001150s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195222' LIMIT 1 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195222' , '2561' , '127.0.0.1' , 1553142453) [ RunTime:0.001003s ]
+[ error ] [21606][HTTP 400] Unable to create record: The From phone number +16042299404 is not a valid, SMS-capable inbound phone number or short code for your account.[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Version.php:85]
+---------------------------------------------------------------
+[ 2019-03-21T12:29:00+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195222&event=
+[运行时间：0.784736s] [吞吐率：1.27req/s] [内存消耗：3,094.73kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004626s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195222',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001653s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011684s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001799s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195222'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553138939 LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195222' LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195222' , '8102' , '127.0.0.1' , 1553142539) [ RunTime:0.003775s ]
+[ error ] [21606][HTTP 400] Unable to create record: The From phone number 6042299404 is not a valid, SMS-capable inbound phone number or short code for your account.[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Version.php:85]
+---------------------------------------------------------------
+[ 2019-03-21T12:30:53+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.448194s] [吞吐率：2.23req/s] [内存消耗：3,094.73kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002157s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001548s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001673s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002771s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139052 LIMIT 1 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001020s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000604s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '4042' , '127.0.0.1' , 1553142652) [ RunTime:0.003587s ]
+[ error ] [21606][HTTP 400] Unable to create record: The From phone number +16042299404 is not a valid, SMS-capable inbound phone number or short code for your account.[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Version.php:85]
+---------------------------------------------------------------
+[ 2019-03-21T12:32:12+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.052748s] [吞吐率：18.96req/s] [内存消耗：2,580.58kb] [文件加载：70]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002190s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001631s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010182s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002482s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139132 LIMIT 1 [ RunTime:0.000543s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:32:20+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.625377s] [吞吐率：1.60req/s] [内存消耗：3,094.63kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001814s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001352s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009556s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002099s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139140 LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000862s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '6677' , '127.0.0.1' , 1553142740) [ RunTime:0.003473s ]
+[ error ] [21606][HTTP 400] Unable to create record: The From phone number +15558675310 is not a valid, SMS-capable inbound phone number or short code for your account.[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Version.php:85]
+---------------------------------------------------------------
+[ 2019-03-21T12:33:03+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.041630s] [吞吐率：24.02req/s] [内存消耗：2,579.61kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002522s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001539s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001774s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001820s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000518s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:33:14+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.491301s] [吞吐率：2.04req/s] [内存消耗：3,080.52kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002527s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001598s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\smsbao\Smsbao @sms_send [ RunTime:0.434271s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001357s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001751s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139193 LIMIT 1 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '7017' , '127.0.0.1' , 1553142793) [ RunTime:0.003955s ]
+[ sql ] [ SQL ] DELETE FROM `vw_sms`    WHERE  `id` = 1 [ RunTime:0.003779s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:33:46+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.468721s] [吞吐率：2.13req/s] [内存消耗：3,086.48kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003256s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001441s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\smsbao\Smsbao @sms_send [ RunTime:0.409428s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001205s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001775s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139226 LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '5240' , '127.0.0.1' , 1553142826) [ RunTime:0.003376s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:35:00+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.720599s] [吞吐率：1.39req/s] [内存消耗：3,116.44kb] [文件加载：95]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002192s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001617s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001442s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001947s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139299 LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000977s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000647s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '1984' , '127.0.0.1' , 1553142899) [ RunTime:0.003774s ]
+[ error ] [0]致命错误: Cannot use object of type Twilio\Rest\Api\V2010\Account\MessageInstance as array[C:\workplace\vanwan\addons\smsbao\Smsbao.php:86]
+---------------------------------------------------------------
+[ 2019-03-21T12:35:23+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.035586s] [吞吐率：28.10req/s] [内存消耗：2,579.90kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001949s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001299s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001324s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001855s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000585s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:35:30+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.498040s] [吞吐率：2.01req/s] [内存消耗：3,082.66kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001771s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001084s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\smsbao\Smsbao @sms_send [ RunTime:0.450436s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010486s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001507s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139330 LIMIT 1 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000726s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '1044' , '127.0.0.1' , 1553142930) [ RunTime:0.001207s ]
+---------------------------------------------------------------
+[ 2019-03-21T12:37:45+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.780429s] [吞吐率：1.28req/s] [内存消耗：3,095.07kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002616s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001404s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008820s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.001734s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139464 LIMIT 1 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '4644' , '127.0.0.1' , 1553143064) [ RunTime:0.003097s ]
+[ error ] [21606][HTTP 400] Unable to create record: The From phone number +15005550006 is not a valid, SMS-capable inbound phone number or short code for your account.[C:\workplace\vanwan\vendor\twilio\sdk\Twilio\Version.php:85]
+---------------------------------------------------------------
+[ 2019-03-21T12:38:14+08:00 ] 127.0.0.1 GET vanwan.ca/api/sms/send?mobile=6047195215&event=
+[运行时间：0.902194s] [吞吐率：1.11req/s] [内存消耗：3,082.80kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003254s ]
+[ info ] [ LANG ] C:\workplace\vanwan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'sms',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=os40354agian48nc4dn1ol7u0m; keeplogin=1%7C86400%7C1553210686%7C5241bd949054efee5e7cca059bb21fba; think_var=zh-cn',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://vanwan.ca/api.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'vanwan.ca',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '6047195215',
+  'event' => '',
+)
+[ info ] [ LANG ] C:\workplace\vanwan\public/../application/api\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002028s ]
+[ info ] [ RUN ] app\api\controller\Sms->send[ C:\workplace\vanwan\application\api\controller\Sms.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\smsbao\Smsbao @sms_send [ RunTime:0.847317s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001591s ] mysql:host=127.0.0.1;dbname=vanwan_ca;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_sms` [ RunTime:0.002095s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_sms` WHERE  `mobile` = '6047195215'  AND `event` = 'register' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `vw_sms` WHERE  `ip` = '127.0.0.1'  AND `createtime` >  1553139493 LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `vw_user` [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SELECT * FROM `vw_user` WHERE  `mobile` = '6047195215' LIMIT 1 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] INSERT INTO `vw_sms` (`event` , `mobile` , `code` , `ip` , `createtime`) VALUES ('register' , '6047195215' , '2729' , '127.0.0.1' , 1553143093) [ RunTime:0.003571s ]
