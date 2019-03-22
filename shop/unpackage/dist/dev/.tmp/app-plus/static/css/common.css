@@ -115,3 +115,22 @@
 .icon-detail_icon_gou:before {
 	content: "\e610";
 }
+
+
+.arrow-right {
+    font-family: "grace-iconfont" !important;
+    font-size: 18px;
+    font-style: normal;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+
+/* .uni-page-head{
+	background: linear-gradient(to left, #FA4DBE 0, #FBAA58 100%) !important;
+} */

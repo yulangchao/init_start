@@ -1,6 +1,6 @@
 <template>
 	<view class="s-page-wrapper">
-		你好啊！
+		
 	</view>
 </template>
 

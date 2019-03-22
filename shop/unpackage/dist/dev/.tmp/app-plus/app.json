@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/jiu/index",
+    "pages/info/index",
     "pages/cate/index",
     "pages/like/index",
     "pages/member/index",
@@ -10,7 +10,9 @@
     "pages/member/login",
     "pages/member/reg",
     "pages/member/pwd",
-    "pages/member/set"
+    "pages/member/set",
+    "pages/member/profile",
+    "pages/member/crop"
   ],
   "subPackages": [],
   "window": {
@@ -33,10 +35,10 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/jiu/index",
+        "pagePath": "pages/info/index",
         "iconPath": "static/img/footer/jiu.png",
         "selectedIconPath": "static/img/footer/jiu-act.png",
-        "text": "9.9包邮"
+        "text": "温玩信息"
       },
       {
         "pagePath": "pages/cate/index",

@@ -3,14 +3,14 @@
 		<view class="header" v-bind:class="{'status':isH5Plus}">
 			<view class="userinfo" v-if="hasLogin">
 				<view class="face grace-animate rotateInDownLeft">
-					<image :src="$configdata.ROOTPATH + userInfo.avatar"></image>
+					<image :src="avatar_url"></image>
 				</view>
 				<view class="info">
 					<view class="username">{{userInfo.nickname}}</view>
-					<view class="integral">积分:{{userInfo.integral}}</view>
+					<view class="integral">积分:{{userInfo.score}}</view>
 				</view>
 			</view>
-			<view class="userinfo" v-else  @tap="bindLogin">
+			<view class="userinfo" v-else @tap="bindLogin">
 				<view class="face">
 					<image src="../../static/HM-PersonalCenter/face.jpeg"></image>
 				</view>
@@ -20,13 +20,13 @@
 				</view>
 			</view>
 			<view class="setting">
-				
+
 				<image @tap="gotoSet" v-if="hasLogin" src="../../static/HM-PersonalCenter/setting.png"></image>
 				<image v-else class="to" src="../../static/HM-PersonalCenter/to.png"></image>
-				
+
 			</view>
 		</view>
-		
+
 		<view class="orders">
 			<view class="box">
 				<view class="label" v-for="(row,index) in orderTypeLise" :key="row.name" hover-class="hover" @tap="toOrderType(index)">
@@ -51,16 +51,21 @@
 	</view>
 </template>
 <script>
-    import {
-        mapState,
-        mapMutations
-    } from 'vuex'
-	
-	
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
+
+
 	export default {
-        computed: {
-            ...mapState(['hasLogin', 'forcedLogin','userInfo'])
-        },
+		computed: {
+			...mapState(['hasLogin', 'forcedLogin', 'userInfo']),
+			avatar_url() {
+				if (this.hasLogin) {
+					return this.$configdata.ROOTPATH + this.userInfo.avatar;
+				}
+			}
+		},
 		data() {
 			return {
 				//#ifdef APP-PLUS
@@ -142,15 +147,17 @@
 						}
 					]
 				],
+				avatar: ""
 			};
 		},
 		onLoad() {
 			//加载
 			this.init();
+
 		},
 		methods: {
 			init() {
-				
+
 			},
 			//用户点击订单类型
 			toOrderType(index) {
@@ -160,36 +167,37 @@
 			},
 			//用户点击列表项
 			toPage(list_i, li_i) {
-				
+
 				uni.navigateTo({
-				    url: this.severList[list_i][li_i].url,
+					url: this.severList[list_i][li_i].url,
 				});
 				uni.showToast({
 					title: this.severList[list_i][li_i].name
 				});
 			},
-            gotoSet() {
-                uni.navigateTo({
-                    url: './set',
-                });
-            },
-            ...mapMutations(['logout']),
-            bindLogin() {
-                uni.navigateTo({
-                    url: './login',
-                });
-            }
+			gotoSet() {
+				uni.navigateTo({
+					url: './set',
+				});
+			},
+			...mapMutations(['logout']),
+			bindLogin() {
+				uni.navigateTo({
+					url: './login',
+				});
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
 	@import url("../../graceUI/animate.css");
+
 	page {
 		background-color: #fff
 	}
-	
-	.face{
+
+	.face {
 		animation-iteration-count: 1;
 	}
 

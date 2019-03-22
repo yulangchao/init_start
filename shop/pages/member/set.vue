@@ -3,17 +3,14 @@
 		<view class="main-title">
 			<view class="menu-cat">
 				<view class="span">
-					<image
-						src="http://cmsstatic.dataoke.com//web/nine_special/images/nine_title.svg?v=201902151532"
-						class="is-response"
-					></image>
+					<image src="http://cmsstatic.dataoke.com//web/nine_special/images/nine_title.svg?v=201902151532" class="is-response"></image>
 				</view>
 			</view>
 		</view>
-		<graceHeader :imgurl="$configdata.ROOTPATH + userInfo.avatar" :title="userInfo.nickname" :desc="userInfo.bio"></graceHeader>
+		<graceHeader :imgurl="avatar_url" :title="userInfo.nickname" :desc="userInfo.bio"></graceHeader>
 
 		<view class="list">
-			<view class="li" hover-class="hover">
+			<view class="li" hover-class="hover" @tap="changeprofile">
 				<view class="icon">
 					<image :src="'../../static/HM-PersonalCenter/sever/profile.png'"></image>
 				</view>
@@ -89,7 +86,12 @@
 
 	export default {
 		computed: {
-			...mapState(['hasLogin', 'forcedLogin', 'userInfo'])
+			...mapState(['hasLogin', 'forcedLogin', 'userInfo']),
+			avatar_url() {
+				if (this.hasLogin) {
+					return this.$configdata.ROOTPATH + this.userInfo.avatar;
+				}
+			}
 		},
 		onLoad() {
 			//加载
@@ -116,14 +118,24 @@
 			},
 			resetpwd() {
 				uni.navigateTo({
-					url: './pwd'
+					url: './pwd',
+					animationType: 'pop-in',
+					animationDuration: 200
+				})
+			},
+			changeprofile() {
+				uni.navigateTo({
+					url: './profile',
+					animationType: 'pop-in',
+					animationDuration: 200
 				})
 			}
 		}
 	}
 </script>
 <style lang="scss">
-@import '../../static/css/index.css';
+	@import '../../static/css/index.css';
+
 	page {
 		background-color: #f1f1f1
 	}

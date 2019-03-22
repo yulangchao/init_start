@@ -19,6 +19,7 @@ Vue.prototype.$Sysconf = HttpRequest.config
 Vue.prototype.$SysCache = HttpCache
 Vue.prototype.$store = store
 Vue.prototype.$configdata = configdata
+Vue.prototype.$eventHub = new Vue(); 
 
 App.mpType = 'app'
 

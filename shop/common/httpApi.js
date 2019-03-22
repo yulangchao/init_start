@@ -21,6 +21,7 @@ module.exports = {
 		register: "user/register",
 		sendcode: "sms/send",
 		login: "user/login",
-		resetpwd : "user/resetpwd"
+		resetpwd : "user/resetpwd",
+		profile: "user/profile"
 	}
 }

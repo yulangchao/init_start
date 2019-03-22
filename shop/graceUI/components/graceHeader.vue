@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<navigator class="grace-header" :url="url" :open-type='openType' v-if="url != ''">
-			<view class="logo"><image :src="imgurl" mode="widthFix"></image></view>
+			<view class="logo"><image :src="imgurl"></image></view>
 			<view class="content">
 				<view class="title grace-blod">{{title}}</view>
 				<view class="desc">{{desc}}</view>
@@ -9,7 +9,7 @@
 			<view class="icon-right"></view>
 		</navigator>
 		<view class="grace-header" :url="url" :open-type='openType' v-if="url == ''">
-			<view class="logo"><image :src="imgurl" mode="widthFix"></image></view>
+			<view class="logo"><image :src="imgurl"></image></view>
 			<view class="content">
 				<view class="title grace-blod">{{title}}</view>
 				<view class="desc">{{desc}}</view>
@@ -52,6 +52,7 @@ export default {
 .grace-header{width:92%; padding:20px 4%; background:#FFF; display:flex; flex-wrap:nowrap; position:relative;  border-bottom:1px solid #E9E9E9;}
 .grace-header .logo{width:60px; height:60px; margin:5px; flex-shrink:0;}
 .grace-header .logo image{width:60px; height:60px; border-radius:100%;}
+
 .grace-header .content{width:100%; margin:10px; margin-right:20px; height:60px;}
 .grace-header .content .title{font-size:18px; line-height:22px;}
 .grace-header .content .desc{line-height:2em; color:#7F7F7F; margin-top:3px; font-size:13px;}

@@ -176,6 +176,22 @@
 .icon-detail_icon_gou:before {
 	content: "\E610";
 }
+.arrow-right {
+    font-family: "grace-iconfont" !important;
+    font-size: 18px;
+    font-style: normal;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+/* .uni-page-head{
+	background: linear-gradient(to left, #FA4DBE 0, #FBAA58 100%) !important;
+} */
 @charset "UTF-8";
 @-webkit-keyframes icon-spin {
 0% {
@@ -4945,7 +4961,7 @@ to {-webkit-transform:rotateY(360deg);transform:rotateY(360deg);}}
 
 .grace-header{width:92%; padding:20px 4%; background:#FFF; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-flex-wrap:nowrap; -ms-flex-wrap:nowrap; flex-wrap:nowrap; position:relative;  border-bottom:1px solid #E9E9E9;}
 .grace-header .logo{width:60px; height:60px; margin:5px; -webkit-flex-shrink:0; -ms-flex-negative:0; flex-shrink:0;}
-.grace-header .logo image{width:60px; height:60px; border-radius:5px;}
+.grace-header .logo image{width:60px; height:60px; border-radius:100%;}
 .grace-header .content{width:100%; margin:10px; margin-right:20px; height:60px;}
 .grace-header .content .title{font-size:18px; line-height:22px;}
 .grace-header .content .desc{line-height:2em; color:#7F7F7F; margin-top:3px; font-size:13px;}

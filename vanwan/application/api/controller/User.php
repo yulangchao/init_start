@@ -166,16 +166,16 @@ class User extends Api
     public function profile()
     {
         $user = $this->auth->getUser();
-        $username = $this->request->request('username');
+        // $username = $this->request->request('username');
         $nickname = $this->request->request('nickname');
         $bio = $this->request->request('bio');
         $avatar = $this->request->request('avatar');
-        $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $this->auth->id)->find();
-        if ($exists)
-        {
-            $this->error(__('Username already exists'));
-        }
-        $user->username = $username;
+        // $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $this->auth->id)->find();
+        // if ($exists)
+        // {
+        //     $this->error(__('Username already exists'));
+        // }
+        // $user->username = $username;
         $user->nickname = $nickname;
         $user->bio = $bio;
         $user->avatar = $avatar;

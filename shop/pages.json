@@ -31,9 +31,9 @@
 			}
 		},
 		{
-			"path": "pages/jiu/index",
+			"path": "pages/info/index",
 			"style": {
-				"navigationBarTitleText": "9.9包邮",
+				"navigationBarTitleText": "温玩信息",
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh": true,
 				"app-plus": {
@@ -68,10 +68,7 @@
 							}
 						]
 					}
-				},
-
-
-				"navigationStyle": "custom"
+				}
 			}
 		},
 		{
@@ -79,10 +76,8 @@
 			"style": {
 				"navigationBarTitleText": "收藏",
 				"app-plus": {
-					"titleNView": false,
 					"bounce": "none"
-				},
-				"navigationStyle": "custom"
+				}
 			}
 		},
 		{
@@ -145,6 +140,16 @@
             "style": {
                 "navigationBarTitleText": "安全中心"
             }
+        }, {
+            "path": "pages/member/profile",
+            "style": {
+                "navigationBarTitleText": "修改个人信息"
+            }
+        }, {
+            "path": "pages/member/crop",
+            "style": {
+                "navigationBarTitleText": "头像裁剪"
+            }
         }
 	],
 	"globalStyle": {
@@ -164,10 +169,10 @@
 			"selectedIconPath": "static/img/footer/home-act.png",
 			"text": "首页"
 		}, {
-			"pagePath": "pages/jiu/index",
+			"pagePath": "pages/info/index",
 			"iconPath": "static/img/footer/jiu.png",
 			"selectedIconPath": "static/img/footer/jiu-act.png",
-			"text": "9.9包邮"
+			"text": "温玩信息"
 		}, {
 			"pagePath": "pages/cate/index",
 			"iconPath": "static/img/footer/cate.png",

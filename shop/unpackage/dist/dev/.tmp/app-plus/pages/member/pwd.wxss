@@ -34,7 +34,7 @@ page {
 	z-index: 999;
 	width: 200rpx;
 	text-align: center;
-	
+
 	color: #353535;
 	margin-top: -114rpx;
 	background: white;
@@ -43,8 +43,8 @@ page {
 	height: 80rpx;
 	line-height: 80rpx;
 }
-uni-button:after{
-	border:none !important;
+uni-button:after {
+	border: none !important;
 }
 .registerbtn ._button {
 	margin-top: 20rpx;
@@ -64,8 +64,8 @@ uni-button:after{
 ._button:after {
 	border: 2rpx solid #f2f2f2;
 }
-.has-mgt-80{
-	margin-top:40rpx;
+.has-mgt-80 {
+	margin-top: 40rpx;
 }
 .is-input {
 	height: 88rpx;
@@ -90,5 +90,4 @@ uni-button:after{
 	resize: none;
 	margin: 30rpx 0;
 }
-
 
